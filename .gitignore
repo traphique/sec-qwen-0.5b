@@ -1,0 +1,12 @@
+# model weights — too large for git
+models/
+adapters/*.safetensors
+
+# venv
+.venv/
+
+# caches
+.cache/
+__pycache__/
+*.pyc
+.DS_Store

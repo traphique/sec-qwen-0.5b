@@ -1,0 +1,20 @@
+# LoRA fine-tune: Qwen2.5-0.5B-Instruct student on distilled security data
+model: "mlx-community/Qwen2.5-0.5B-Instruct-bf16"
+train: true
+fine_tune_type: lora
+data: "data/"
+# LoRA
+num_layers: 16
+rank: 16
+alpha: 32.0
+dropout: 0.05
+# optimization
+batch_size: 2
+iters: 400
+learning_rate: 2.0e-4
+steps_per_eval: 50
+steps_per_report: 10
+val_batches: 10
+adapter_path: "adapters"
+save_every: 100
+max_seq_length: 2048

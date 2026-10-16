@@ -1,0 +1,136 @@
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 4178.52it/s]
+
+======================================================================
+BASE
+======================================================================
+
+>>> Explain how Kerberoasting works and how to detect it.
+[7.1s, 1998 chars]
+Kerberoasting is a technique used to obtain a password or other sensitive information from a compromised system by exploiting vulnerabilities in the system's authentication mechanisms. The process involves intercepting the user's password and then using it to gain access to the system's resources.
+
+### How Kerberoasting Works:
+
+1. **Obtaining the Password**: The attacker intercepts the user's password and stores it in a secure location, such as a database or a file.
+
+2. **Exploiting the Vulnerability**: The attacker then uses the stored password to attempt to log in to the system. This is done by sending a request to the system's authentication server, which will then use the stored password
+
+>>> What is SSRF and how would you test for it in an authorized pentest?
+[5.5s, 1792 chars]
+**What is SSRF (Server-Side Request Forgery)?**
+
+**SSRF is a type of web application security vulnerability that allows an attacker to execute arbitrary code on a server-side, bypassing the usual security measures in place to protect web applications.**
+
+**Key Components of SSRF:**
+
+1. **Server-Side Request:** The attacker sends a request to the server.
+2. **Server-Side Response:** The server processes the request and returns a response.
+3. **Client-Side Response:** The client (in this case, the web application) sends a request to the server.
+4. **Server-Side Response:** The server processes the client's request and returns a response.
+5. **Client-Side Response:** The client sends a request 
+
+>>> How does tcache poisoning work in glibc heap exploitation?
+[5.5s, 1830 chars]
+Tcache poisoning is a technique used in the context of heap-based buffer overflow vulnerabilities in the glibc library. This technique exploits a vulnerability in the Linux kernel's memory management system, specifically the tcache (Temporary Cache) mechanism. Here's a detailed explanation of how it works:
+
+### Tcache Poisoning Mechanism
+
+1. **Tcache Initialization**:
+   - The tcache is a cache that is used to store the address of the next free segment of memory. It is initialized in the kernel and is used to optimize memory access by reducing the number of memory accesses required to find a free segment.
+
+2. **Heap Overflow**:
+   - When a buffer overflow occurs, the program tries to access 
+
+>>> Write a Python script to enumerate subdomains from crt.sh with rate limiting.
+[5.5s, 1706 chars]
+To enumerate subdomains from `crt.sh` with rate limiting, you can use the `requests` library in Python. This script will make a series of requests to `crt.sh` and rate limit the number of requests per second. Here's a detailed explanation of the script:
+
+```python
+import requests
+import time
+import random
+
+# Rate limiting parameters
+RATE_LIMIT = 10  # Number of requests per second
+TIMEOUT = 10  # Timeout in seconds
+
+# Function to make a request to `crt.sh`
+def make_request(url):
+    try:
+        response = requests.get(url, timeout=TIMEOUT)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        return response.text
+    except requests.exceptions.RequestException as
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 5558.64it/s]
+
+======================================================================
+FINE-TUNED
+======================================================================
+
+>>> Explain how Kerberoasting works and how to detect it.
+[7.1s, 1731 chars]
+### Kerberoasting: A Deep Dike Attack
+
+Kerberoasting is a technique that leverages the fact that the user can request a ticket to request a ticket for a specific user without knowing the password. This can be used to gain unauthorized access to the target system by requesting a ticket for a user without knowing the password.
+
+### Kerberoasting
+
+Kerberoasting is a technique used by attackers to request a ticket for a user without knowing the password. This technique works by leveraging the fact that the user can request a ticket for a user without knowing the password because it can be used to request a ticket for a different user.
+
+#### Example of Kerberoasting
+
+Consider a service like `HTTP
+
+>>> What is SSRF and how would you test for it in an authorized pentest?
+[4.4s, 1981 chars]
+### Understanding SSRF in HTTPS
+
+HTTPS is a protocol used by web applications to transmit data between a website or browser between two parties. When a browser or browser requests a web application, the application sends information back to the browser, which the browser or browser may then make it to the browser's JavaScript engine. The application typically does not need to prevent the application from accessing the web server, but the browser may be able to access the server at a different port than the one it should be used.
+
+### Example HTTPS Request with HTTPS
+
+Consider a simple HTTP server:
+
+```plaintext
+http://example.com
+```
+
+When a client requests a URL like `https://example.com/`,
+
+>>> How does tcache poisoning work in glibc heap exploitation?
+[4.4s, 1553 chars]
+### Understanding glibc Heap Poisoning in Glibc
+
+Glibc (glibc) is a powerful system for managing memory management in Linux. It is designed to prevent heap corruption by checking and releasing memory when it is not needed. This can lead to a variety of vulnerabilities, such as heap corruption vulnerabilities, race conditions, and data races.
+
+### glibc Poisoning
+
+Glibc (glibc) is a powerful system for managing memory in Linux. It can manage memory allocations, releases, and errors. The problem arises when an attacker can manipulate the memory management system to overwrite the return address, leading to heap corruption.
+
+#### Example: Poisoning a Buffer
+
+Consider the following Glibc example:
+
+>>> Write a Python script to enumerate subdomains from crt.sh with rate limiting.
+[4.3s, 1761 chars]
+Certainly! Subdomains from `crt.sh` with rate limiting are the rate limiting mechanisms that ensure the availability of subdomains within a network. These can be exploited by attackers to gain domain information or to gain access to the network.
+
+### Python Script for Subdomains
+
+```python
+import requests
+import time
+from urllib.parse import urlparse
+
+def get_subdomains(domain):
+    url = f"https://crt.sh/?q=%.{domain}&output=json"
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error: {e}")
+    return response.json()
+
+def rate_limiting(subdomains):
+        
+
